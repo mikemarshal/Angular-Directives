@@ -1,0 +1,37 @@
+<button
+  class="btn btn-primary"
+  (click)="onPress()"
+>Display Details</button>
+
+<p *ngIf="buttonPressed">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel vulputate nunc. In augue velit, tristique a viverra molestie, condimentum non ex. In sodales posuere pellentesque. Donec elit tortor, efficitur vel consequat nec, luctus quis lorem. Morbi hendrerit sollicitudin purus at faucibus. Sed eget justo condimentum, porta magna eget, faucibus nunc. Pellentesque blandit commodo metus. Curabitur scelerisque in nunc a fermentum.
+
+  Mauris in lacinia metus. Morbi id massa lacinia, placerat ipsum non, volutpat eros. Proin efficitur dolor dictum commodo dapibus. Phasellus rhoncus odio eu orci suscipit elementum. Aliquam erat volutpat. Praesent et ligula id est scelerisque tincidunt fermentum a ex. Etiam maximus tincidunt ex, in gravida nisi luctus in.
+
+  Proin ac augue viverra risus ultricies rutrum id eu erat. Ut accumsan, turpis at mollis consequat, nulla turpis ornare neque, vitae sodales tellus felis ac erat. In ultricies justo sit amet metus pellentesque convallis. Sed aliquet nisl ligula, finibus convallis tortor rhoncus et. Pellentesque vitae eros sagittis, auctor justo non, ultrices libero. Suspendisse aliquet nunc non tempor venenatis. Praesent augue justo, lacinia quis vestibulum eget, molestie sit amet massa. Suspendisse nec pretium est. Vestibulum urna neque, ornare posuere bibendum in, mollis condimentum lectus.
+
+  Phasellus fermentum aliquam leo vitae tempus. Nulla viverra pharetra blandit. Curabitur eget scelerisque ipsum, eu consectetur est. Nunc faucibus luctus leo sit amet tempor. Etiam eu sem sapien. Suspendisse vestibulum tincidunt eros, at molestie mi viverra sed. Aliquam lobortis laoreet pellentesque. Nullam sit amet tincidunt erat. Duis consectetur quis quam commodo dapibus.
+
+  Ut mi ipsum, eleifend sed dolor suscipit, dapibus tristique lectus. Vivamus sodales laoreet sem, non semper justo placerat eu. Suspendisse pharetra, ligula vitae consectetur sagittis, purus libero aliquam ante, a ornare massa nisl vestibulum nunc. Praesent quis rhoncus odio, quis feugiat quam. Suspendisse et quam mauris. In non tempus nisi. Proin egestas erat a massa sodales maximus. Integer vulputate neque ut porttitor lobortis. Vivamus vehicula erat dui, a porta dolor pharetra sollicitudin. Nulla pulvinar, mauris varius gravida bibendum, felis metus dictum dolor, nec facilisis justo risus quis metus. Sed vitae bibendum dolor. Cras volutpat auctor urna in mollis. Sed commodo lobortis arcu quis egestas. Nunc a neque aliquet, porta orci quis, dignissim erat. Mauris dignissim risus sed risus viverra, ut pharetra lacus bibendum.
+</p>
+
+<p
+  *ngFor="let log of loggedPress"
+  [ngStyle]="{backgroundColor: log >= 5 ? 'blue' : 'transparent'}"
+  [ngClass]="{'white_text': log >= 5}"
+  >{{ log }}</p>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <ol>
+        <li>Add A button which says 'Display Details'</li>
+        <li>Add a paragraph with any content of your choice (e.g. 'Secret Password = tuna')</li>
+        <li>Toggle the displaying of that paragraph with the button created in the first step</li>
+        <li>Log all button clicks in an array and output that array below the secret paragraph (maybe log a timestamp or simply an incrementing number)</li>
+        <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color (ngClass)</li>
+      </ol>
+    </div>
+  </div>
+</div>
