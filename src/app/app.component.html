@@ -16,9 +16,9 @@
 </p>
 
 <p
-  *ngFor="let log of loggedPress"
-  [ngStyle]="{backgroundColor: log >= 5 ? 'blue' : 'transparent'}"
-  [ngClass]="{'white_text': log >= 5}"
+  *ngFor="let log of loggedPress; let i = index"
+  [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent'}"
+  [ngClass]="{'white_text': i >= 5}"
   >{{ log }}</p>
 
 

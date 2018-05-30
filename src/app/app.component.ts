@@ -14,7 +14,8 @@ export class AppComponent {
 
   onPress() {
     this.loggedPressCounter++;
-    this.loggedPress.push(this.loggedPress.length + 1);      
+    // this.loggedPress.push(this.loggedPress.length + 1);
+    this.loggedPress.push(new Date()); 
     if (this.buttonPressed) {
       this.buttonPressed = false;
       return;
